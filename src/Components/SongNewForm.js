@@ -118,10 +118,10 @@ export default function SongNewForm() {
         </div>
         <div class="mb-4">
           <label
-            class="mb-2 uppercase font-bold text-lg text-grey-darkest"
+            class="mb-2 mr-1 font-bold text-lg text-grey-darkest"
             htmlFor="is_favorite"
           >
-            Favorite:
+            Favorite: 
           </label>
           <input
             id="is_favorite"

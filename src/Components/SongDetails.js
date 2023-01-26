@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 import { BsStarHalf } from "react-icons/bs";
-// import Reviews from "./Reviews";
+import Reviews from "./Reviews";
 
 export default function SongDetails() {
   const [song, setSong] = useState([]);
@@ -28,7 +28,7 @@ export default function SongDetails() {
     deleteSong();
   };
   return (
-    <div class="flex justify-center">
+    <div class="md:flex justify-center gap-4 w-[100vw]">
       <article class="block rounded-lg shadow-lg bg-white max-w-sm text-center">
         <div class="py-4 px-10 border-b border-teal-500 font-bold text-lg">
           {song.name}
@@ -41,12 +41,12 @@ export default function SongDetails() {
           <h3 class="mb-4">
             {song.is_favorite ? (
               <p className="flex">
-                <span>This song is a favorite</span>
+                <span>Favorite</span>
                 <FaStar className="my-0.5 mx-1 text-teal-500 hover:text-purple-500" />
               </p>
             ) : (
               <p>
-                <span>This song is not a favorite</span>
+                <span>Not favorite</span>
                 <BsStarHalf className="my-0.5 mx-1 text-teal-500 hover:text-purple-500" />
               </p>
             )}
@@ -86,7 +86,7 @@ export default function SongDetails() {
           </div>
         </div>
       </article>
-      {/* <Reviews /> */}
+      <Reviews />
     </div>
   );
 }
