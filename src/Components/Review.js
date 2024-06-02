@@ -11,7 +11,7 @@ export default function Review({ review, handleDelete, handleSubmit }) {
   const { title, rating, reviewer, content, id } = review;
 
   return (
-    <div class="">
+    <div class="w-full">
       {viewEditForm ? (
         <ReviewForm
           reviewDetails={review}
@@ -19,29 +19,28 @@ export default function Review({ review, handleDelete, handleSubmit }) {
           toggleView={toggleView}
         />
       ) : (
-        <div class="flex flex-col justify-center rounded-lg shadow-lg bg-teal-100 max-w-sm text-start my-1 mx-4 px-1 overflow-auto">
+        <div class="flex flex-col justify-center rounded-lg shadow-lg bg-teal-100 w-11/12 text-start m-4 p-4 overflow-y-auto">
           <h4 class="flex justify-between">
-            <span>Title: {title}</span>
-            <span>Ratings: {rating}</span>
+            <h5 className="text-base"><span className="font-semibold text-xl mr-2">{title}</span> by {reviewer}</h5>
+            <span>Rating: {rating}</span>
           </h4>
-          <h5>Name: {reviewer}</h5>
-          <p>Review: {content}</p>
-        </div>
-      )}
-      <div class="flex justify-start p-2">
-        <button
-          class="block bg-teal-500 hover:bg-purple-500 text-slace-900 text-lg mx-2 p-1 rounded"
-          onClick={toggleView}
-        >
-          Edit review
-        </button>
-        <button
-          class="block bg-teal-500 hover:bg-purple-500 text-slace-900 text-lg mx-2 p-1 rounded"
-          onClick={() => handleDelete(id)}
-        >
-          Delete
-        </button>
+          <p>{content}</p>
+          <div class="flex justify-start p-2 mt-4 text-sm">
+            <button
+              class="border border-teal-500 hover:bg-teal-500 hover:text-teal-100 mx-2 py-1 px-4 rounded"
+              onClick={toggleView}
+            >
+              Edit
+            </button>
+            <button
+              class="border border-teal-500 hover:bg-teal-500 hover:text-teal-100 mx-2 py-1 px-2 rounded"
+              onClick={() => handleDelete(id)}
+            >
+              Delete
+            </button>
+          </div>
       </div>
+      )}
     </div>
   );
 }

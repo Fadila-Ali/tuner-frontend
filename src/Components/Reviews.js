@@ -60,12 +60,11 @@ function Reviews() {
     });
   }, [id]);
   return (
-    <section class="block rounded-lg shadow-lg bg-white max-w-sm text-center">
+    <section class="rounded-lg shadow-lg bg-white w-2/3 text-center">
       <div class="py-4 px-10 border-b border-teal-500 font-bold text-lg">
         <h2>Song Reviews</h2>
       </div>
       <ReviewForm handleSubmit={handleAdd}>
-        <h3 class="text-gray-900 text-xl font-medium mb-2">Add a New Review</h3>
       </ReviewForm>
       {reviews.map((review) => (
         <Review

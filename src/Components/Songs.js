@@ -13,7 +13,10 @@ export default function Songs() {
     useEffect(() => {
         axios
         .get(`${API}/songs`)
-        .then((res) => setSongs(res.data))
+        .then((res) => {
+          console.log("songs: ", res.data);
+          setSongs(res.data);
+        })
         .catch((c) => console.warn("catch", c))
     }, [])
   return (

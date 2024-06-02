@@ -38,18 +38,13 @@ function ReviewForm(props) {
     });
   };
   return (
-    <div class="w-full max-w-xs flex flex-col items-center justify-center">
+    <div class="w-full flex items-center justify-center">
       {props.children}
       <form
-        class="bg-white shadow-md rounded px-10 pt-6 pb-8 mb-4"
+        class="bg-white w-full flex flex-col gap-4 shadow-md rounded px-10 py-6 m-4"
         onSubmit={handleSubmit}
       >
-        <label
-          class="block text-gray-700 text-sm font-bold mb-2"
-          htmlFor="reviewer"
-        >
-          Name:
-        </label>
+        <h3 class="text-gray-900 text-xl font-medium mb-2">Add your Review</h3>
         <input
           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="reviewer"
@@ -59,26 +54,15 @@ function ReviewForm(props) {
           placeholder="Your name"
           required
         />
-        <label
-          class="block text-gray-700 text-sm font-bold mb-2"
-          htmlFor="title"
-        >
-          Title:
-        </label>
         <input
           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="title"
           type="text"
-          required
           value={review.title}
           onChange={handleTextChange}
+          placeholder="Your review title"
+          required
         />
-        <label
-          class="block text-gray-700 text-sm font-bold mb-2"
-          htmlFor="rating"
-        >
-          Rating:
-        </label>
         <input
           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="rating"
@@ -89,27 +73,23 @@ function ReviewForm(props) {
           step="1"
           value={review.rating}
           onChange={handleTextChange}
+          placeholder="Rating (1 = lowest and 5 = highest)"
+          required
         />
-        <label
-          class="block text-gray-700 text-sm font-bold mb-2"
-          htmlFor="content"
-        >
-          Review:
-        </label>
         <textarea
           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="content"
           type="text"
           name="content"
           value={review.content}
-          placeholder="What do you think..."
+          placeholder="What do you think...?"
           onChange={handleTextChange}
         />
         <button
-          class="block bg-teal-500 hover:bg-purple-500 text-slace-900 text-lg mx-auto p-2 rounded"
+          class="block bg-teal-500 text-teal-100 hover:bg-teal-100 hover:text-teal-500 text-lg mx-auto py-2 px-4 rounded"
           type="submit"
         >
-          Submit
+          Submit review
         </button>
       </form>
     </div>

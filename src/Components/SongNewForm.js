@@ -132,12 +132,12 @@ export default function SongNewForm() {
         </div>
         <div class="flex justify-around">
           <button
-            class="block bg-teal-500 hover:bg-purple-500 text-slace-900 uppercase text-lg mx-auto p-2 rounded"
+            class="block bg-teal-500 hover:bg-teal-500 text-slace-900 uppercase text-lg mx-auto p-2 rounded"
             type="submit"
           >
             Submit
           </button>
-          <button class="block bg-teal-500 hover:bg-purple-500 text-slace-900 uppercase text-lg mx-auto p-2 rounded">
+          <button class="block bg-teal-500 hover:bg-teal-500 text-slace-900 uppercase text-lg mx-auto p-2 rounded">
             <Link to={`/songs`}>Cancel</Link>
           </button>
         </div>
