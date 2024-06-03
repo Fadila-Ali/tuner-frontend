@@ -21,8 +21,8 @@ export default function Songs() {
     }, [])
   return (
     <div>
-      <section className="relative overflow-x-hidden shadow-md sm:rounded-lg ">
-        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <section className="relative overflow-x-hidden shadow-md rounded-lg mt-1">
+        <table class="w-full text-sm text-left text-gray-500">
           <thead class="text-xs text-gray-700 uppercase bg-teal-500 ">
             <tr>
               <th scope="col" class="md:px-6 md:py-3 sm:px-3">

@@ -1,26 +1,28 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { RiNeteaseCloudMusicFill} from "react-icons/ri"
-import { VscAdd} from "react-icons/vsc"
+import { RiNeteaseCloudMusicFill} from "react-icons/ri";
+import { VscAdd} from "react-icons/vsc";
 
 export default function NavBar() {
-  const [activeLink, setActiveLink] = useState('songs');
+  const [activeLink, setActiveLink] = useState('tuner');
   return (
     <nav>
       <div className="flex justify-between bg-teal-500 p-6">
         <h1 className="text-4xl font-bold font-signature">
-          <Link
-            to="/songs"
-            className="flex hover:text-teal-100"
-          >
-            <RiNeteaseCloudMusicFill />
-            <span>Tuner</span>
-          </Link>
+          <button onClick={() => setActiveLink('tuner')}>
+            <Link
+              to="/"
+              className="flex hover:text-teal-100"
+            >
+              <RiNeteaseCloudMusicFill />
+              <span>Tuner</span>
+            </Link>
+          </button>
         </h1>
-        <div>
+        <div className="nav">
           <button
             type="button"
-            class="inline-block px-6 py-2 border border-teal-100 font-medium text-xs leading-tight  rounded hover:bg-teal-100 hover:bg-opacity-6 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
+            class="inline-block sm:px-2 sm:py-1 md:px-6 md:py-2 border border-teal-100 font-medium text-xs leading-tight  rounded hover:bg-teal-100 hover:bg-opacity-6 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
           >
             <Link
               to="/songs/new"
@@ -32,7 +34,7 @@ export default function NavBar() {
           </button>
           <button
             type="button"
-            class="inline-block px-6 py-2 ml-2 border border-teal-100 font-medium text-xs leading-tight  rounded hover:bg-teal-100 hover:bg-opacity-6 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
+            class="inline-block  sm:px-2 sm:py-1 md:px-6 md:py-2 ml-2 border border-teal-100 font-medium text-xs leading-tight  rounded hover:bg-teal-100 hover:bg-opacity-6 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
           >
             <Link
               to="/playlists/new"

@@ -31,41 +31,39 @@ export default function AlbumDetails() {
   };
   console.log(album);
   return (
-    <div class="w-[100vw] flex ">
-      <div class=" md:flex flex-wrap p-10">
+    <div class="w-full">
+      <div class="sm:flex flex-wrap items-center gap-4">
         {album.map((el) => {
           return (
             <div class="flex justify-center items-center">
-              <div class="flex flex-col justify-center rounded-lg shadow-lg bg-white max-w-sm text-center m-2 ">
-                <div class="py-4 px-8 font-bold text-lg">
-                  <h3 class="text-gray-700">Song: {el.name}</h3>
-                  <h3 class="text-gray-900 text-xl font-medium mb-2">
-                    Artist: {el.artist}
+              <div class="flex flex-col justify-center items-center rounded-lg shadow-lg bg-white w-80 h-64 text-center m-2 ">
+                <div class="py-4 px-2">
+                  <h3 class="my-2">Song: <span className="font-semibold">{el.name}</span></h3>
+                  <h3 class=" mb-2">
+                    Artist: <span className="font-semibold">{el.artist}</span>
                   </h3>
-                  <h3 class="mb-4">
+                  <h3 class="mb-4 w-full">
                     {el.is_favorite ? (
-                      <p className="flex">
-                        <span>Favorite</span>
-                        <FaStar className="my-0.5 mx-1 text-teal-500 hover:text-purple-500" />
+                      <p className="flex justify-center items-center">
+                        Favorite <FaStar className="inline my-0.5 mx-1 text-teal-500 hover:text-teal-500" />
                       </p>
                     ) : (
                       <p>
-                        <span>Not favorite</span>
-                        <BsStarHalf className="my-0.5 mx-1 text-teal-500 hover:text-purple-500" />
+                        Not favorite <BsStarHalf className="inline my-0.5 mx-1 text-teal-500 hover:text-teal-500" />
                       </p>
                     )}
                   </h3>
-                  <p class="text-gray-700 text-base mt-4">
-                    Duration: {el.time}
+                  <p class="mt-4">
+                    Duration: <span className="font-semibold">{el.time}</span>
                   </p>
                 </div>
-                <div class=" flex justify-evenly py-3 px-6 border-t border-teal-500 text-gray-600">
+                <div class="flex justify-evenly gap-2 py-3 px-6 border-t border-teal-500">
                   <div>
                     {" "}
                     <Link to={`/albums`}>
                       <button
                         type="button"
-                        class=" inline-block px-4 py-2.5 bg-teal-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-purple-500 hover:shadow-lg focus:bg-purple-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg transition duration-150 ease-in-out"
+                        class=" inline-block px-4 py-2.5 bg-teal-500 text-teal-100 font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-teal-100 hover:text-teal-500 hover:shadow-lg focus:bg-teal-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-teal-800 active:shadow-lg transition duration-150 ease-in-out"
                       >
                         Back
                       </button>
@@ -75,7 +73,7 @@ export default function AlbumDetails() {
                     <Link to={`/albums/${id}/edit`}>
                       <button
                         type="button"
-                        class=" inline-block px-4 py-2.5 bg-teal-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-purple-500 hover:shadow-lg focus:bg-purple-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg transition duration-150 ease-in-out"
+                        class=" inline-block px-4 py-2.5 bg-teal-500 text-teal-100 font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-teal-100 hover:text-teal-500 hover:shadow-lg focus:bg-teal-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-teal-800 active:shadow-lg transition duration-150 ease-in-out"
                       >
                         Edit
                       </button>
@@ -84,7 +82,7 @@ export default function AlbumDetails() {
                   <div>
                     <button
                       type="button"
-                      class=" inline-block px-4 py-2.5 bg-teal-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-purple-500 hover:shadow-lg focus:bg-purple-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg transition duration-150 ease-in-out"
+                      class=" inline-block px-4 py-2.5 bg-teal-500 text-teal-100 font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-teal-100 hover:text-teal-500 hover:shadow-lg focus:bg-teal-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-teal-800 active:shadow-lg transition duration-150 ease-in-out"
                       onClick={handleDelete}
                     >
                       Delete

@@ -21,7 +21,7 @@ function App() {
     <div className="h-[100vh] bg-teal-50">
       <Router>
         <NavBar />
-        <main className="text-slace-900 bg-teal-50 p-6">
+        <main className="text-slace-900 bg-teal-50">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/songs" element={<Index />} />

@@ -17,15 +17,15 @@ export default function Artists() {
       .catch((c) => console.warn("catch", c));
   }, []);
   return (
-    <div>
-      <section className="relative overflow-x-hidden shadow-md sm:rounded-lg ">
-        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <div className="w-full">
+      <section className="relative sm:w-3/6 m-auto overflow-x-hidden shadow-md rounded-lg ">
+        <table class="w-full text-sm text-left">
           <thead class="text-xs text-gray-700 uppercase bg-teal-500 ">
             <tr>
-              <th scope="col" class="md:px-6 md:py-3 sm:px-3">
+              <th scope="col" class="py-3 px-3">
                 See this artist
               </th>
-              <th scope="col" class="md:px-6 md:py-3 sm:px-3">
+              <th scope="col" class="py-3 px-3">
                 Title
               </th>
             </tr>

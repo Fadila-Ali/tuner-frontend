@@ -42,18 +42,12 @@ export default function SongNewForm() {
   };
 
   return (
-    <div class="w-full max-w-xs">
+    <div class="w-full">
       <form
-        class="bg-white shadow-md rounded px-10 pt-6 pb-8 mb-4"
+        class="bg-white sm:w-1/3 shadow-md rounded m-auto px-10 py-8 my-4"
         onSubmit={handleSubmit}
       >
         <div class="mb-4">
-          <label
-            class="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="name"
-          >
-            Title:
-          </label>
           <input
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="name"
@@ -65,12 +59,6 @@ export default function SongNewForm() {
           />
         </div>
         <div class="mb-4">
-          <label
-            class="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="artist"
-          >
-            Artist:
-          </label>
           <input
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="artist"
@@ -83,12 +71,6 @@ export default function SongNewForm() {
           />
         </div>
         <div class="mb-4">
-          <label
-            class="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="album"
-          >
-            Album:
-          </label>
           <input
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="album"
@@ -100,12 +82,6 @@ export default function SongNewForm() {
           />
         </div>
         <div class="mb-4">
-          <label
-            class="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="time"
-          >
-            Time:
-          </label>
           <input
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="time"
@@ -121,7 +97,7 @@ export default function SongNewForm() {
             class="mb-2 mr-1 font-bold text-lg text-grey-darkest"
             htmlFor="is_favorite"
           >
-            Favorite: 
+            Is Favorite?: 
           </label>
           <input
             id="is_favorite"
@@ -132,12 +108,12 @@ export default function SongNewForm() {
         </div>
         <div class="flex justify-around">
           <button
-            class="block bg-teal-500 hover:bg-teal-500 text-slace-900 uppercase text-lg mx-auto p-2 rounded"
+            class="block bg-teal-500 text-teal-100 hover:bg-teal-100 hover:text-teal-500 py-2 px-4 rounded"
             type="submit"
           >
             Submit
           </button>
-          <button class="block bg-teal-500 hover:bg-teal-500 text-slace-900 uppercase text-lg mx-auto p-2 rounded">
+          <button class="block bg-teal-500 text-teal-100 hover:bg-teal-100 hover:text-teal-500 py-2 px-4 rounded">
             <Link to={`/songs`}>Cancel</Link>
           </button>
         </div>

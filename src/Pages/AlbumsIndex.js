@@ -4,7 +4,7 @@ import Albums from '../Components/Albums'
 export default function AlbumsIndex() {
   return (
     <div class="flex flex-col items-center">
-      <h2>Album Index</h2>
+      <h2>Album</h2>
       <Albums />
     </div>
   );

@@ -29,31 +29,29 @@ export default function PlaylistDetails() {
   };
   console.log(playlist);
   return (
-    <div class="w-[100vw] flex">
-      <div class=" flex flex-wrap h-28 min-w-28 p-10">
+    <div class="w-full">
+      <div class="sm:flex flex-wrap items-center gap-4">
         {playlist.map((el) => {
           return (
-            <div class="flex justify-center items-center">
-              <div class="flex flex-col justify-center rounded-lg shadow-lg bg-white max-w-sm text-center m-2 ">
-                <div class="py-4 px-8 font-bold text-lg">
-                  <h3 class="text-gray-900 text-xl font-medium mb-2">
-                    Artist: {el.artist}
+            <div className="flex justify-center items-center">
+              <div className="flex flex-col justify-center rounded-lg shadow-lg bg-white w-80 h-64 text-center m-2 ">
+                <div className="py-4 px-2">
+                  <h3 className="mb-2">
+                    Artist: <span className="font-semibold">{el.artist}</span>
                   </h3>
-                  <h3 class="text-gray-700">From Album: {el.album}</h3>
-                  <h3 class="mb-4">
+                  <h3 className="my-2">From Album: <span className="font-semibold">{el.album}</span></h3>
+                  <h3 className="mb-4">
                     {el.is_favorite ? (
                       <p className="flex">
-                        <span>Favorite</span>
-                        <FaStar className="my-0.5 mx-1 text-teal-500 hover:text-purple-500" />
+                        Favorite <FaStar className="inline my-0.5 mx-1 text-teal-500 hover:text-teal-900" />
                       </p>
                     ) : (
                       <p>
-                        <span>Not favorite</span>
-                        <BsStarHalf className="my-0.5 mx-1 text-teal-500 hover:text-purple-500" />
+                        Not favorite <BsStarHalf className="inline my-0.5 mx-1 text-teal-500 hover:text-teal-900" />
                       </p>
                     )}
                   </h3>
-                  <p class="text-gray-700 text-base mt-4">
+                  <p className="mt-4">
                     Duration: {el.time}
                   </p>
                 </div>
@@ -63,7 +61,7 @@ export default function PlaylistDetails() {
                     <Link to={`/playlists`}>
                       <button
                         type="button"
-                        class=" inline-block px-4 py-2.5 bg-teal-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-purple-500 hover:shadow-lg focus:bg-purple-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg transition duration-150 ease-in-out"
+                        className=" inline-block px-4 py-2.5 bg-teal-500 text-teal-100 font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-teal-100 hover:text-teal-500 hover:shadow-lg focus:bg-teal-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-teal-800 active:shadow-lg transition duration-150 ease-in-out"
                       >
                         Back
                       </button>
@@ -73,7 +71,7 @@ export default function PlaylistDetails() {
                     <Link to={`/playlists/${id}/edit`}>
                       <button
                         type="button"
-                        class=" inline-block px-4 py-2.5 bg-teal-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-purple-500 hover:shadow-lg focus:bg-purple-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg transition duration-150 ease-in-out"
+                        className=" inline-block px-4 py-2.5 bg-teal-500 text-teal-100 font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-teal-100 hover:text-teal-500 hover:shadow-lg focus:bg-teal-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-teal-800 active:shadow-lg transition duration-150 ease-in-out"
                       >
                         Edit
                       </button>
@@ -82,7 +80,7 @@ export default function PlaylistDetails() {
                   <div>
                     <button
                       type="button"
-                      class=" inline-block px-4 py-2.5 bg-teal-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-purple-500 hover:shadow-lg focus:bg-purple-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg transition duration-150 ease-in-out"
+                      className=" inline-block px-4 py-2.5 bg-teal-500 text-teal-100 font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-teal-100 hover:text-teal-500 hover:shadow-lg focus:bg-teal-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-teal-800 active:shadow-lg transition duration-150 ease-in-out"
                       onClick={handleDelete}
                     >
                       Delete

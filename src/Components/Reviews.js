@@ -60,7 +60,7 @@ function Reviews() {
     });
   }, [id]);
   return (
-    <section class="rounded-lg shadow-lg bg-white w-2/3 text-center">
+    <section class="rounded-lg shadow-lg bg-white sm:w-2/3 text-center">
       <div class="py-4 px-10 border-b border-teal-500 font-bold text-lg">
         <h2>Song Reviews</h2>
       </div>
